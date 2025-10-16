@@ -84,7 +84,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <button className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-[#1E4FC2] to-[#4C83FF] text-white rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#4C83FF]/50 transition-all duration-300">
+            <button className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-[#1E4FC2] to-[#4C83FF] text-white rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#4C83FF]/50 transition-all duration-300" onClick={() => { setIsOpen(false); window.location.href = '/signup'; }}>
               Join Club
             </button>
           </div>
