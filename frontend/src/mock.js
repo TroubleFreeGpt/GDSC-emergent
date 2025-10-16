@@ -150,9 +150,291 @@ export const events = [
 ];
 
 export const leaderboard = [
-  { rank: 1, name: "Alex Chen", coins: 2450, tier: "Diamond" },
-  { rank: 2, name: "Sarah Martinez", coins: 2180, tier: "Diamond" },
-  { rank: 3, name: "Jordan Lee", coins: 1920, tier: "Platinum" },
-  { rank: 4, name: "Taylor Kim", coins: 1650, tier: "Platinum" },
-  { rank: 5, name: "Morgan Blake", coins: 1380, tier: "Gold" }
+  { rank: 1, name: "Alex Chen", coins: 2450, tier: "Diamond", avatar: "AC" },
+  { rank: 2, name: "Sarah Martinez", coins: 2180, tier: "Diamond", avatar: "SM" },
+  { rank: 3, name: "Jordan Lee", coins: 1920, tier: "Platinum", avatar: "JL" },
+  { rank: 4, name: "Taylor Kim", coins: 1650, tier: "Platinum", avatar: "TK" },
+  { rank: 5, name: "Morgan Blake", coins: 1380, tier: "Gold", avatar: "MB" },
+  { rank: 6, name: "Chris Parker", coins: 1120, tier: "Gold", avatar: "CP" },
+  { rank: 7, name: "Jamie Wilson", coins: 890, tier: "Silver", avatar: "JW" },
+  { rank: 8, name: "Riley Davis", coins: 720, tier: "Silver", avatar: "RD" },
+  { rank: 9, name: "Cameron Singh", coins: 540, tier: "Bronze", avatar: "CS" },
+  { rank: 10, name: "Avery Johnson", coins: 380, tier: "Bronze", avatar: "AJ" }
+];
+
+// Current logged-in student data
+export const currentStudent = {
+  id: 1,
+  name: "Alex Chen",
+  email: "alex.chen@emich.edu",
+  avatar: "AC",
+  coins: 2450,
+  tier: "Diamond",
+  xp: 8750,
+  nextTierXP: 10000,
+  eventsAttended: 12,
+  challengesCompleted: 28,
+  projectsDeployed: 5,
+  joinedDate: "2024-09-01"
+};
+
+// Challenges data
+export const challenges = [
+  {
+    id: 1,
+    title: "Binary Search Master",
+    description: "Implement binary search in 3 different languages",
+    difficulty: "Intermediate",
+    coins: 150,
+    xp: 300,
+    status: "completed",
+    deadline: "2025-02-15",
+    category: "Algorithms"
+  },
+  {
+    id: 2,
+    title: "REST API Builder",
+    description: "Create a complete REST API with authentication",
+    difficulty: "Advanced",
+    coins: 300,
+    xp: 600,
+    status: "in-progress",
+    deadline: "2025-02-28",
+    category: "Backend"
+  },
+  {
+    id: 3,
+    title: "CSS Animation Showcase",
+    description: "Build 5 smooth CSS animations without libraries",
+    difficulty: "Beginner",
+    coins: 100,
+    xp: 200,
+    status: "not-started",
+    deadline: "2025-02-20",
+    category: "Frontend"
+  },
+  {
+    id: 4,
+    title: "Docker Deployment",
+    description: "Containerize and deploy a full-stack app",
+    difficulty: "Advanced",
+    coins: 250,
+    xp: 500,
+    status: "not-started",
+    deadline: "2025-03-05",
+    category: "DevOps"
+  },
+  {
+    id: 5,
+    title: "Machine Learning Basics",
+    description: "Train your first ML model with Python",
+    difficulty: "Intermediate",
+    coins: 200,
+    xp: 400,
+    status: "in-progress",
+    deadline: "2025-03-10",
+    category: "AI/ML"
+  }
+];
+
+// Shop products
+export const products = [
+  {
+    id: 1,
+    name: "GDSC T-Shirt",
+    description: "Official GDSC EMU black tee with OctoDev logo",
+    price: 500,
+    stock: 24,
+    image: "https://via.placeholder.com/300x300/0C1F3F/4C83FF?text=GDSC+Tee",
+    category: "Apparel",
+    popularity: 95
+  },
+  {
+    id: 2,
+    name: "Laptop Sticker Pack",
+    description: "10 holographic stickers featuring OctoDev and Google colors",
+    price: 150,
+    stock: 50,
+    image: "https://via.placeholder.com/300x300/0C1F3F/00FF9C?text=Stickers",
+    category: "Accessories",
+    popularity: 88
+  },
+  {
+    id: 3,
+    name: "Priority Event Access",
+    description: "Skip the waitlist for the next 3 workshops",
+    price: 300,
+    stock: 15,
+    image: "https://via.placeholder.com/300x300/0C1F3F/FBBC04?text=Priority+Pass",
+    category: "Perks",
+    popularity: 92
+  },
+  {
+    id: 4,
+    name: "GDSC Hoodie",
+    description: "Premium navy hoodie with embroidered OctoDev",
+    price: 800,
+    stock: 12,
+    image: "https://via.placeholder.com/300x300/0C1F3F/4285F4?text=Hoodie",
+    category: "Apparel",
+    popularity: 98
+  },
+  {
+    id: 5,
+    name: "1-on-1 Mentorship Session",
+    description: "60-minute code review with industry professional",
+    price: 400,
+    stock: 8,
+    image: "https://via.placeholder.com/300x300/0C1F3F/34A853?text=Mentorship",
+    category: "Perks",
+    popularity: 85
+  },
+  {
+    id: 6,
+    name: "Mechanical Keyboard",
+    description: "RGB mechanical keyboard with custom GDSC keycaps",
+    price: 1200,
+    stock: 5,
+    image: "https://via.placeholder.com/300x300/0C1F3F/EA4335?text=Keyboard",
+    category: "Tech",
+    popularity: 90
+  },
+  {
+    id: 7,
+    name: "GitHub Pro 1 Year",
+    description: "Free GitHub Pro subscription for 12 months",
+    price: 250,
+    stock: 20,
+    image: "https://via.placeholder.com/300x300/0C1F3F/4C83FF?text=GitHub+Pro",
+    category: "Perks",
+    popularity: 87
+  },
+  {
+    id: 8,
+    name: "Custom Domain",
+    description: ".dev domain registration for your portfolio",
+    price: 180,
+    stock: 30,
+    image: "https://via.placeholder.com/300x300/0C1F3F/00FF9C?text=.dev+Domain",
+    category: "Perks",
+    popularity: 79
+  }
+];
+
+// Coin transactions
+export const coinTransactions = [
+  {
+    id: 1,
+    type: "earned",
+    amount: 150,
+    description: "Completed Binary Search Master challenge",
+    date: "2025-02-10",
+    balance: 2450
+  },
+  {
+    id: 2,
+    type: "spent",
+    amount: -500,
+    description: "Redeemed GDSC T-Shirt",
+    date: "2025-02-08",
+    balance: 2300
+  },
+  {
+    id: 3,
+    type: "earned",
+    amount: 100,
+    description: "Attended React Mastery Workshop",
+    date: "2025-02-05",
+    balance: 2800
+  },
+  {
+    id: 4,
+    type: "earned",
+    amount: 50,
+    description: "Algorithm Arena Challenge (Top 10)",
+    date: "2025-02-02",
+    balance: 2700
+  },
+  {
+    id: 5,
+    type: "spent",
+    amount: -300,
+    description: "Purchased Priority Event Access",
+    date: "2025-01-28",
+    balance: 2650
+  }
+];
+
+// Admin stats
+export const adminStats = {
+  totalStudents: 247,
+  activeEvents: 8,
+  totalCoinsIssued: 324500,
+  challengesActive: 12,
+  shopItemsSold: 156,
+  averageAttendance: 78
+};
+
+// Recent admin actions
+export const recentActions = [
+  {
+    id: 1,
+    admin: "Dr. Smith",
+    action: "Added new challenge: Docker Deployment",
+    timestamp: "2025-02-15 14:30",
+    type: "challenge"
+  },
+  {
+    id: 2,
+    admin: "Prof. Johnson",
+    action: "Updated HackEMU 2025 event details",
+    timestamp: "2025-02-15 11:20",
+    type: "event"
+  },
+  {
+    id: 3,
+    admin: "Dr. Smith",
+    action: "Awarded 50 bonus coins to top 10 students",
+    timestamp: "2025-02-14 16:45",
+    type: "coins"
+  },
+  {
+    id: 4,
+    admin: "Prof. Lee",
+    action: "Added new shop item: Mechanical Keyboard",
+    timestamp: "2025-02-14 09:15",
+    type: "shop"
+  },
+  {
+    id: 5,
+    admin: "Dr. Smith",
+    action: "Approved 15 new student registrations",
+    timestamp: "2025-02-13 13:00",
+    type: "students"
+  }
+];
+
+// Purchase history
+export const purchaseHistory = [
+  {
+    id: 1,
+    productName: "GDSC T-Shirt",
+    coins: 500,
+    date: "2025-02-08",
+    status: "Delivered"
+  },
+  {
+    id: 2,
+    productName: "Priority Event Access",
+    coins: 300,
+    date: "2025-01-28",
+    status: "Active"
+  },
+  {
+    id: 3,
+    productName: "Laptop Sticker Pack",
+    coins: 150,
+    date: "2025-01-15",
+    status: "Delivered"
+  }
 ];
