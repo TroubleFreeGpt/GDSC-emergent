@@ -53,9 +53,9 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="px-6 py-2.5 bg-gradient-to-r from-[#1E4FC2] to-[#4C83FF] text-white rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#4C83FF]/50 transition-all duration-300 hover:scale-105 active:scale-95">
+            <Link to="/signup" className="px-6 py-2.5 bg-gradient-to-r from-[#1E4FC2] to-[#4C83FF] text-white rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#4C83FF]/50 transition-all duration-300 hover:scale-105 active:scale-95">
               Join Club
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
