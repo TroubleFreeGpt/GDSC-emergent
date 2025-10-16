@@ -51,10 +51,10 @@ const Home = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="group px-8 py-4 bg-gradient-to-r from-[#1E4FC2] to-[#4C83FF] text-white rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-[#4C83FF]/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center space-x-2">
+            <Link to="/signup" className="group px-8 py-4 bg-gradient-to-r from-[#1E4FC2] to-[#4C83FF] text-white rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-[#4C83FF]/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center space-x-2">
               <span>Join the Club</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={20} />
-            </button>
+            </Link>
             <Link 
               to="/events"
               className="px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-[#0A0D14] transition-all duration-300 hover:scale-105 active:scale-95"
