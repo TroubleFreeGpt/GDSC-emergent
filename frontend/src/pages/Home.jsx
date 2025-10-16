@@ -176,10 +176,10 @@ const Home = () => {
             Earn coins, build projects, and make lasting connections.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="group px-10 py-5 bg-gradient-to-r from-[#00FF9C] to-[#4C83FF] text-[#0A0D14] rounded-full font-black text-lg hover:shadow-2xl hover:shadow-[#00FF9C]/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center space-x-2">
+            <Link to="/signup" className="group px-10 py-5 bg-gradient-to-r from-[#00FF9C] to-[#4C83FF] text-[#0A0D14] rounded-full font-black text-lg hover:shadow-2xl hover:shadow-[#00FF9C]/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center space-x-2">
               <span>Get Started Now</span>
               <Rocket className="group-hover:translate-x-1 transition-transform duration-300" size={22} />
-            </button>
+            </Link>
             <Link 
               to="/events"
               className="px-10 py-5 border-2 border-[#00FF9C] text-[#00FF9C] rounded-full font-bold text-lg hover:bg-[#00FF9C] hover:text-[#0A0D14] transition-all duration-300 hover:scale-105 active:scale-95"
